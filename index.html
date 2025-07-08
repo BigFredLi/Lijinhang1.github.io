@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+   <style>
+    /* --- 用于手机屏幕的响应式布局代码 --- */
+    @media (max-width: 768px) {
+      /* 当屏幕宽度小于768px时，应用以下样式 */
+      .responsive-cell {
+        display: block; /* 将表格单元格变为块级元素，使其可以独占一行 */
+        width: 100% !important; /* 强制宽度为100%，覆盖行内样式 */
+        max-width: 100% !important; /* 同样强制覆盖 */
+        padding: 5% 5% 0 5% !important; /* 调整内边距，避免内容贴边 */
+      }
+      
+      /* 调整照片下方的间距 */
+      .responsive-cell img {
+          margin-bottom: 20px;
+      }
+    }
+  </style>
+
+  <title>李锦航 - 个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="李锦航">
+  <meta name="description" content="李锦航的个人简历和项目展示。本科就读于北京工业大学电子信息工程专业。">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <!-- 顶部个人信息区 -->
+  <table class="responsive-cell" style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <!-- 左侧照片区 -->
+        <td style="padding:2.5%;width:30%;max-width:30%;vertical-align: top;">
+          <!-- 
+            请将你的照片（推荐竖版长方形）放入 images 文件夹,
+            并在这里修改为你自己的照片文件名
+          -->
+          <img style="width:100%;max-width:100%;" alt="profile photo" src="images/李锦航个人照片.jpg">
+        </td>
+
+       <!-- 右侧文字区 -->
+        <td class="responsive-cell"style="padding:2.5%;width:70%;vertical-align:text-top;">
+          <!-- 姓名 -->
+          <p class="name" style="font-size: 25px;  margin-top: 2px; margin-bottom: 2px;">
+            Jinhang Li 李锦航
+          </p>
+          
+          <!-- 
+            修改2：调整了个人简介的字体大小和行间距，并替换为你的真实信息 
+          -->
+          <p style="font-size: 15px; line-height: 1.6;">
+           A proactive third-year Electronic and Information Engineering student with a strong passion for Large Language Models (LLMs) and multi-modal learning. 
+            Recently, I have been studying related knowledge: 
+            I have read the classic paper "Attention Is All You Need," understood the principles and differences of core models from RNN to Transformer,
+             and learned the principles of the LoRA fine-tuning algorithm. I have been making simple attempts to use tools like Ollama and RAGFlow to complete 
+             local model deployment and build a private knowledge base; I also use LLaMA-Factory to fine-tune large language models with LoRA and use FastAPI 
+             to provide callable API interfaces for a backend. I sincerely hope to have the opportunity to continue my advanced studies with you and to conduct more
+              in-depth exploration and research in this direction during my graduate studies.
+         
+          <!-- 
+            修改4：补充了联系方式链接
+          -->
+          <p style="margin-top:20px;">
+            ✉️Email：13260022986@163.com</a>  
+            ☎️Number：13260022986
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <!-- 个人陈述区 -->
+<table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:2.5%;width:100%;">
+          <hr>
+          <h2>Education</h2>
+          
+          <!-- 这里是您的教育经历内容 -->
+          <div>
+              <!-- 使用Flexbox实现第一行的左右对齐 -->
+              <div style="display: flex; justify-content: space-between;">
+                  <strong>Beijing University of Technology</strong>
+                  <strong>September 2022 - June 2026</strong>
+              </div>
+
+              <!-- 成绩与排名信息 -->
+              <p style="margin-top: 8px; margin-bottom: 5px;">
+                 🚩 Grade: 89.26/100, ranked 14th in a class of 60 students (Top 25%)
+              </p>
+              
+              <!-- 相关课程信息 -->
+              <p style="margin-top: 5px; margin-bottom: 5px;">
+                 🚩 Relevant Coursework: C Programming,Machine learning,Advanced Mathematics, Linear Algebra, Probability and Statistics, Complex Analysis, Computer Architecture
+              </p>
+              <!-- 相关课程信息 -->
+              <p style="margin-top: 5px; margin-bottom: 5px;">
+                 🚩  Awards: University Scholarship, 2023-2024,University Scholarship, 2022-2023
+              </p>
+          </div>
+          
+          
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+  <!-- 个人经历区 -->
+ <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:2.5%;width:100%;">
+          
+          <!-- 
+            ↓↓↓ 关键改动1：将CSS样式直接嵌入HTML中 ↓↓↓ 
+          -->
+          <style>
+            /* 列表容器的样式 */
+            .paper-list {
+              list-style: none; /* 移除默认的黑点 */
+              padding-left: 0;
+              margin-left: 0;
+            }
+
+            /* 列表每一项的样式 */
+            .paper-list li {
+              border-left: 4px solid #ff7f0e; /* 橙色竖线 */
+              padding-left: 15px; /* 文字和竖线的间距 */
+              margin-bottom: 25px; /* 项目之间的垂直间距 */
+            }
+
+            /* 列表内段落的样式 */
+            .paper-list li p {
+              margin: 4px 0; /* 调整项目内部的行间距 */
+            }
+
+            /* 列表内斜体字 (项目描述) 的样式 */
+            .paper-list em {
+              color: #555;
+            }
+
+            /* 列表内高亮标签的样式 */
+            .paper-list .tag-highlight {
+              color: #d9534f; /* 保持红色高亮 */
+              font-weight: bold;
+            }
+          </style>
+
+          <hr> <!-- 分割线 -->
+          <h2>Project Experience</h2>
+          
+          <!-- 按年份组织项目 -->
+          <h3>2025</h3>
+          <!-- 
+            ↓↓↓ 关键改动2：将 class 从 "project-list" 改为 "paper-list" ↓↓↓ 
+          -->
+          <ul class="paper-list">
+    <!-- 第一个项目 -->
+    <li>
+      <p><strong>A Rubik's Cube Solving Robot Based on Visual Recognition and Optimal Algorithms</strong></p>
+      <p><u>Jinhang Li</u>, Zhaopeng Jia, Zhongyi Huang</p>
+      <p><em>Developed a Cube solving robot capable of solving a standard 3x3 cube in under 10 seconds.
+            Implemented using C++ and C#, responsible for:Image capturing and color block recognition;Generating a solving algorithm;Optimizing the algorithm to minimize mechanical steps;Serial communication with the low-level controller.</em></p>
+    </li>
+    
+    <!-- 第二个项目 -->
+    <li>
+      <!-- 这里是关键的修改：为标题加上了<strong>标签 -->
+      <p><strong>BPNN for Handwritten Digit Recognition</strong></p> 
+      <p><u>Jinhang Li</u></p>
+      <p><em>Built a Backpropagation Neural Network (BPNN) in Python and trained it on the MNIST dataset. 
+        The model achieved a 90% accuracy on the test set after just three training epochs. To ensure robust generalization, 
+        I validated its performance by carefully comparing training and test set accuracies, confirming that no overfitting occurred. 
+        This project demonstrated my proficiency in implementing fundamental neural network architectures and applying key model validation techniques.</em> </p>
+    </li>
+</ul>
+          <h3>2024</h3>
+          <!-- 同样修改这里的 class -->
+          <ul class="paper-list">
+            <!-- 2023年的项目放在这里 -->
+             <li>
+              <p><strong>Linux Inter-Process Communication (IPC) System</strong></p>
+              <p><u>Jinhang Li</u>，Huiyang Huang</p>
+              <p><em>Engineered and implemented a robust Inter-Process Communication (IPC) mechanism within a Linux environment to establish a bidirectional communication channel between processes. 
+                This solution successfully facilitated the reliable transfer of various data types, including text messages, images, and document files, </em></p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+ <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:2.5%;width:100%;">
+          <hr>
+          <h2>EXTRA CURRICULAR ACTIVITIES</h2>
+          <div>
+              <!-- 使用Flexbox实现第一行的左右对齐 -->
+              <div style="display: flex; justify-content: space-between;">
+                  <strong>President & Principal Trumpet, University Symphony Orchestra
+</strong>
+                  <strong>September 2022 - June 2025</strong>
+              </div>
+          <ul>
+            <li>Directed the orchestra's daily operations, overseeing rehearsal logistics, faculty coordination, and the planning and execution of publicity campaigns and concert events.
+          </ul>
+              
+          </div>
+          <div>
+              <!-- 使用Flexbox实现第一行的左右对齐 -->
+              <div style="display: flex; justify-content: space-between;">
+                  <strong>Project Assistant
+</strong>
+                  <strong>September 2024 - October 2024</strong>
+              </div>
+          <ul>
+            <li>In Professor Qiaofei Jun's lab at Beijing University of Technology, I participated in a wastewater treatment project 
+              led by a doctoral student, performing simple geographic data annotation and tuning neural network model parameters to reduce error</ul>
+              
+          </div>
+          
+           <div>
+              <!-- 使用Flexbox实现第一行的左右对齐 -->
+              <div style="display: flex; justify-content: space-between;">
+                  <strong>Squad Leader, Chaoyang District Sports Games Marching Formation</strong>
+                  <strong>March 2025 - May 2025</strong>
+              </div>
+          <ul>
+            <li>Managed daily attendance and communicated essential information and updates to all group members.</ul>
+              
+          </div>
+          
+          
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+<table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:2.5%;width:100%;">
+          <hr>
+          <h2>SKILLS, ACTIVITIES & INTERESTS</h2>
+          <strong>Languages：</strong>Mandarin (Native), English (Fluent)<br>
+          <strong>Programming：</strong>Proficient in C&C++,Python,Matlab<br>
+          <strong>Interests：</strong>Basketball, Football, Swimming,Trumpet(
+Grade Examination of musical level for nonprofessionals reached the 9th.grade)
+          
+        </td>
+      </tr>
+    </tbody>
+</table>
+

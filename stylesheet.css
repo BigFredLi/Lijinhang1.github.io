@@ -1,0 +1,120 @@
+/* A simple, clean, and responsive HTML CSS template for academic personal homepage */
+/* URL: https://github.com/jonbarron/website */
+/* Modifier: AI Assistant for Jinhang Li */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
+    margin: 0;
+    padding: 0;
+    color: #333; /* 默认文字颜色调深一点 */
+    line-height: 1.6; /* 增加全局行高 */
+    font-size: 16px; /* 设置一个基础字体大小 */
+}
+
+a {
+    color: #1772d0; /* 统一链接颜色 */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* 美化水平分割线 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.name {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* 姓名使用衬线字体，更有分量 */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 1px; /* 调整姓名下的间距 */
+    color: #000;
+}
+
+h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid #ccc; /* 给标题加上下划线 */
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* 移除了很多不必要的table样式，让布局更干净 */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td {
+    padding: 0;
+    vertical-align: top;
+}
+
+h3 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* 列表的整体容器 */
+.project-list {
+    list-style-type: none; /* 关键：移除默认的列表圆点 */
+    padding-left: 0;       /* 关键：移除默认的左侧内边距 */
+}
+
+/* 列表中的每一项 (关键样式) */
+.project-list li {
+    margin-bottom: 30px; /* 项目之间的垂直间距 */
+    padding-left: 20px;  /* 文字和左侧竖线的间距 */
+    border-left: 5px solid #d5a641; /* 关键：添加左侧的彩色竖线 */
+}
+
+/* 列表项里的每个段落 */
+.project-list li p {
+    margin: 4px 0; /* 调整项目内部三行文字的行间距 */
+}
+
+/* 项目标题 */
+.project-list li p strong {
+    font-size: 1.1em; /* 让标题字体稍大一些 */
+}
+
+/* 项目描述文字 (通常是斜体) */
+.project-list li p em {
+    color: #555; /* 描述文字颜色稍浅 */
+}
+
+/* 项目的标签，例如 (课程设计) */
+.tag-highlight {
+    color: #d9534f; /* 红色高亮 */
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+  /* 当屏幕宽度小于768px时，应用以下样式 */
+  .responsive-cell {
+    display: block; /* 将表格单元格变为块级元素，使其可以独占一行 */
+    width: 100% !important; /* 强制宽度为100%，覆盖行内样式 */
+    max-width: 100% !important; /* 同样强制覆盖 */
+    padding: 5% 5% 0 5% !important; /* 调整内边距，避免内容贴边 */
+  }
+  
+  /* 调整照片下方的间距 */
+  .responsive-cell img {
+      margin-bottom: 20px;
+  }
+}
